@@ -40,7 +40,7 @@ const OtpVerify = ({ navigation }: any) => {
             <Text style={styles.text1}>Type a code</Text>
             <View style={styles.rowtextbutton}>
               <TextInput
-                placeholder="Enter OTP"
+                placeholder=" Enter OTP"
                 placeholderTextColor="#A0AEC0"
                 keyboardType="number-pad"
                 maxLength={4}

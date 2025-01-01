@@ -29,12 +29,12 @@ const SignInScreen = ({ navigation }: any) => {
             <View style={styles.form}>
               <TextInput
                 style={styles.input}
-                placeholder="Name"
+                placeholder=" Name"
                 placeholderTextColor="#A0AEC0" 
               />
               <TextInput
                 style={styles.input}
-                placeholder="Password"
+                placeholder=" Password"
                 secureTextEntry
                 placeholderTextColor="#A0AEC0"
               />
@@ -171,7 +171,8 @@ const styles = StyleSheet.create({
   },
   signUpLink: {
     marginTop: 10,
-    color: '#4A4A4A',
+    color: '#007bff',
+    fontWeight:"bold",
   },
 
 });
