@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
+import { View, Text, TouchableOpacity, StyleSheet, Image } from 'react-native';
 import BackArrow from '../imgcode/BackArrow';
 import Wave from '../imgcode/Wave';
 
@@ -12,14 +12,28 @@ const CpSuccess = ({ navigation }: any) => {
             <TouchableOpacity onPress={() => navigation.goBack()}>
               <BackArrow />
             </TouchableOpacity>
-            <Text style={styles.headerTitle}>abc </Text>
+            <Text style={styles.headerTitle}>Success</Text>
           </View>
           <View style={styles.container1}>
             <View style={styles.welcomeSection}>
-              <Text style={styles.welcomeText}>Welcome</Text>
+              <Image
+                source={require('../assets/success.png')}
+                style={styles.icon}
+              />
+              <View>
+                <Text style={styles.cpsuccess}>Change password successfully!</Text>
+                <View>
+                  <Text style={styles.cpsuccess2}>You have successfully change password.
+                    Please use the new password when Sign in.</Text>
+                </View>
+              </View>
+              <View>
+                <TouchableOpacity style={styles.okbutton}
+                  onPress={() => navigation.navigate('SignIn')} >
+                  <Text style={styles.okbuttontext}>Ok</Text>
+                </TouchableOpacity>
+              </View>
             </View>
-
-
           </View>
         </View>
       </View>
@@ -71,14 +85,49 @@ const styles = StyleSheet.create({
   },
   welcomeSection: {
     alignItems: 'center',
+    justifyContent: "center",
     marginTop: 30,
     marginBottom: 30,
   },
-  welcomeText: {
-    fontSize: 28,
-    fontWeight: 'bold',
-    color: '#3629B7',
+  icon: {
+    height: 210,
+    width: 300,
+    alignContent: "center",
+    marginTop: 20,
+    borderRadius: 3,
   },
+  cpsuccess: {
+    fontSize: 18,
+    marginLeft: 60,
+    color: "#3629B7",
+    fontWeight: "semibold",
+    marginTop: 25,
+  },
+  cpsuccess2: {
+    marginTop: 20,
+    fontSize: 16,
+    color: "#343434",
+    fontWeight: "medium",
+    marginLeft: 45,
+    marginRight: 10,
+    padding: 3,
+  },
+  okbutton: {
+    backgroundColor: '#3b7cff',
+    paddingVertical: 14,
+    borderRadius: 12,
+    padding: 18,
+    width: 310,
+    alignItems: 'center',
+    marginTop: 25,
+    marginLeft: 20,
+  },
+  okbuttontext: {
+    fontSize: 18,
+    color: '#fff',
+    fontWeight: "medium",
+  },
+
 });
 
 export default CpSuccess;

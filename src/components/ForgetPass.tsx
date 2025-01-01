@@ -22,7 +22,7 @@ const ForgetPass = ({ navigation }: any) => {
                             <View style={styles.form}>
                                 <TextInput
                                     style={styles.input}
-                                    placeholder="Mobile Number"
+                                    placeholder=" Mobile Number"
                                     placeholderTextColor="#A0AEC0"
                                     keyboardType="phone-pad"
                                     maxLength={10}

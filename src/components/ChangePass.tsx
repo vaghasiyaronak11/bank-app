@@ -18,7 +18,7 @@ const ChangePass = ({ navigation }: any) => {
                     <View style={styles.welcomeSection}>
                         <Text style={styles.inputtext}>Type your new password</Text>
                         <TextInput
-                            placeholder='Enter New Passwrd'
+                            placeholder=' Enter New Passwrd'
                             placeholderTextColor="#A0AEC0"
                             secureTextEntry={false}
                             style={styles.input} />
