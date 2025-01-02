@@ -9,17 +9,16 @@ const OtpVerify = ({ navigation }: any) => {
     const keyboardDidShowListener = Keyboard.addListener(
       'keyboardDidShow',
       () => {
-        setKeyboardVisible(true); // Keyboard is open
+        setKeyboardVisible(true); 
       }
     );
     const keyboardDidHideListener = Keyboard.addListener(
       'keyboardDidHide',
       () => {
-        setKeyboardVisible(false); // Keyboard is closed
+        setKeyboardVisible(false);
       }
     );
 
-    // Clean up the listeners on component unmount
     return () => {
       keyboardDidHideListener.remove();
       keyboardDidShowListener.remove();
@@ -30,7 +29,7 @@ const OtpVerify = ({ navigation }: any) => {
     <View style={styles.main}>
       <View style={styles.container}>
         <View style={styles.header}>
-          <TouchableOpacity onPress={() => navigation.goBack()}>
+          <TouchableOpacity onPress={() => navigation.navigate('ForgetPass')}>
             <BackArrow />
           </TouchableOpacity>
           <Text style={styles.headerTitle}>Forget Password</Text>

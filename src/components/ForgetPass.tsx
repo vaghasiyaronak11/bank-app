@@ -11,7 +11,7 @@ const ForgetPass = ({ navigation }: any) => {
             <View style={styles.Wave}>
                 <View style={styles.container}>
                     <View style={styles.header}>
-                        <TouchableOpacity onPress={() => navigation.goBack()}>
+                        <TouchableOpacity onPress={() => navigation.navigate('SignIn')}>
                             <BackArrow />
                         </TouchableOpacity>
                         <Text style={styles.headerTitle}>Forget Password</Text>
