@@ -10,7 +10,7 @@ const SignInScreen = ({ navigation }: any) => {
         <View style={styles.container}>
 
           <View style={styles.header}>
-            <TouchableOpacity onPress={() => navigation.goBack()}>
+          <TouchableOpacity onPress={() => navigation.navigate('Home')}>
               <BackArrow />
             </TouchableOpacity>
             <Text style={styles.headerTitle}>Sign in</Text>
@@ -44,7 +44,9 @@ const SignInScreen = ({ navigation }: any) => {
               </TouchableOpacity>
             </View>
 
-            <TouchableOpacity style={styles.signInButton}>
+            <TouchableOpacity style={styles.signInButton}
+            onPress={() => navigation.navigate('Tabnavigation')}
+            >
               <Text style={styles.signInButtonText}>Sign in</Text>
             </TouchableOpacity>
 
@@ -80,7 +82,7 @@ const styles = StyleSheet.create({
   },
   container1: {
     flex: 1,
-    backgroundColor: '#F2F1F9',  //color if required//
+    backgroundColor: '#F2F1F9',
     paddingTop: 30,
     paddingHorizontal: 10,
     borderTopLeftRadius: 50,

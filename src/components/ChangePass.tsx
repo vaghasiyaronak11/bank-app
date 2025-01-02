@@ -9,7 +9,7 @@ const ChangePass = ({ navigation }: any) => {
         <View style={styles.main}>
             <View style={styles.container}>
                 <View style={styles.header}>
-                    <TouchableOpacity onPress={() => navigation.goBack()}>
+                    <TouchableOpacity onPress={() => navigation.navigate('OtpVerify')}>
                         <BackArrow />
                     </TouchableOpacity>
                     <Text style={styles.headerTitle}>Change Password </Text>
